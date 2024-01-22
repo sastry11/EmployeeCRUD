@@ -1,0 +1,56 @@
+﻿@model IEnumerable<WebApplicationMVC.Models.Employee>
+
+
+
+<h2>List of Employee</h2>
+
+<p>
+
+    @Html.ActionLink("Create New", "CreateEmployee")
+
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qualification)
+        </th>
+    </tr>
+
+    @foreach (var employee in Model)
+    {
+        <td>
+            @Html.DisplayFor(x => employee.FName)
+        </td>
+        <td>
+            @Html.DisplayFor(x => employee.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(x => employee.Department)
+        </td>
+        <td>
+            @Html.DisplayFor(x => employee.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(x => employee.Qualification)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "UpdateEmployee", new { id = employee.ID })
+            @Html.ActionLink("Details", "GetEmployeeByID", new { id = employee.ID })
+            @Html.ActionLink("Delete", "DeleteEmployee", new { id = employee.ID })
+        </td>
+    }
+</table>

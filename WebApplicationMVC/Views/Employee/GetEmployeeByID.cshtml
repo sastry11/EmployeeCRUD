@@ -1,0 +1,36 @@
+﻿@model WebApplicationMVC.Models.Employee
+
+<h2> Employee Details</h2>
+@Html.ActionLink("Back", "GetEmployeeList")
+<d1 class="d1-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.ID)
+    </dt>
+    <dt>
+        @Html.DisplayFor(model => model.ID)
+    </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.FName)
+    </dt>
+    <dt>
+        @Html.DisplayFor(model => model.FName)
+    </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.Location)
+    </dt>
+    <dt>
+        @Html.DisplayFor(model => model.Location)
+    </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.Department)
+    </dt>
+    <dt>
+        @Html.DisplayFor(model => model.Department)
+    </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.Qualification)
+    </dt>
+    <dt>
+        @Html.DisplayFor(model => model.Qualification)
+    </dt>
+</d1>
